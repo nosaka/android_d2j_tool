@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ListView android:id="@id/listViewEditable" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <android.support.design.widget.FloatingActionButton android:id="@id/buttonAddItem" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:src="@drawable/add_light" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
-</RelativeLayout>

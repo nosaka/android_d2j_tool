@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/relativeLayoutSplash" android:background="@color/splash" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/imageViewSplashDrop" android:visibility="invisible" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/splash_drop" android:layout_centerHorizontal="true" />
-    <ImageView android:layout_width="144.0dip" android:layout_height="144.0dip" android:src="@drawable/splash_logo" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
-</RelativeLayout>

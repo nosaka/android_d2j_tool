@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen android:title="@string/download_settings"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <CheckBoxPreference android:title="@string/background_download" android:key="pref_background_download" android:defaultValue="false" />
-    <CheckBoxPreference android:title="@string/create_screenname_directory" android:key="pref_screen_name_dir" android:defaultValue="true" />
-</PreferenceScreen>

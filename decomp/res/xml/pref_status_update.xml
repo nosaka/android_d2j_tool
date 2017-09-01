@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen android:title="@string/tweet_settings"
-  xmlns:android="http://schemas.android.com/apk/res/android"> android:defaultValue="2" />
-<ListPreference android:entries="@array/pref_upload_to_list" android:title="@string/upload_provider" android:key="pref_upload_to" android:defaultValue="@string/default_upload_provider" android:entryValues="@array/pref_upload_to_values" />
-    <ListPreference android:entries="@array/pref_auto_resize_list" android:title="@string/resize_image_before_upload" android:key="pref_auto_resize" android:defaultValue="1600" android:entryValues="@array/pref_auto_resize_values" />
-</PreferenceScreen>

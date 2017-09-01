@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:orientation="horizontal" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageButton android:id="@id/buttonSavedSearches" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/menu_find_light" />
-    <net.wakamesoba98.sobacha.view.edittext.ImeDetectableEditText android:id="@id/editTextSearch" android:layout_width="fill_parent" android:layout_height="48.0dip" android:hint="@string/search" android:layout_toLeftOf="@id/buttonSearch" android:layout_toRightOf="@id/buttonSavedSearches" android:inputType="text" android:imeOptions="actionSearch" />
-    <ImageButton android:id="@id/buttonSearch" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/search_light" android:layout_alignParentRight="true" />
-</RelativeLayout>

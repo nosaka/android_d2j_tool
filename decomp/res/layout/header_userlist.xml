@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:orientation="vertical" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageButton android:id="@id/buttonEditUserLists" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/content_edit_light" />
-    <Spinner android:id="@id/spinnerUserLists" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_toLeftOf="@id/buttonLoadUserList" android:layout_toRightOf="@id/buttonEditUserLists" />
-    <ImageButton android:id="@id/buttonLoadUserList" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/refresh_light" android:layout_alignParentRight="true" />
-</RelativeLayout>

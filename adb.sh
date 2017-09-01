@@ -4,6 +4,7 @@
 DIR_TOOL="./tools/"
 DIR_WORK="./work/"
 DIR_DECOMP="./decomp/"
+DIR_DECOMP_JAVA=$DIR_DECOMP"main/java/"
 
 APK_FILE=$DIR_WORK"target.apk"
 APK_JAR=$DIR_WORK"classes-dex2jar.jar"
@@ -60,10 +61,6 @@ adb pull $target_apk $APK_FILE
 # apktoolの実行
 $CMD_APKTOOL decode --no-src $APK_FILE -o  $DIR_DECOMP -f 
 
-# # apkの解凍
-# unzip $APK_FILE  -d $DIR_WORK > /dev/null
-# 
-
 # dex2jarの実行
 $CMD_D2J $DIR_DECOMP"classes.dex" -o $APK_JAR --force  > /dev/null
 
@@ -71,7 +68,8 @@ $CMD_D2J $DIR_DECOMP"classes.dex" -o $APK_JAR --force  > /dev/null
 unzip $APK_JAR  -d $DIR_WORK > /dev/null
 
 # jadの実行
-jad -o -r -sjava -d$DIR_DECOMP $DIR_WORK"**/*.class" > /dev/null
+mkdir -p $DIR_DECOMP_JAVA
+jad -o -r -sjava -d$DIR_DECOMP_JAVA $DIR_WORK"**/*.class" > /dev/null
 
 # 後処理
 rm -rf $DIR_WORK

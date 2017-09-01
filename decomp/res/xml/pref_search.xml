@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen android:title="@string/search_settings"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <CheckBoxPreference android:title="@string/exclude_retweets" android:key="pref_exclude_retweet" android:defaultValue="false" />
-    <Preference android:title="@string/trends_location" android:key="pref_trend_location" />
-</PreferenceScreen>
