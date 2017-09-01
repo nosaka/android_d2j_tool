@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_auto_resize_list">
+        <item>オリジナル (3MB以上は圧縮)</item>
+        <item>1600px</item>
+        <item>1280px</item>
+        <item>1024px</item>
+        <item>800px</item>
+        <item>640px</item>
+        <item>480px</item>
+    </string-array>
+    <string-array name="pref_auto_resize_values">
+        <item>0</item>
+        <item>1600</item>
+        <item>1280</item>
+        <item>1024</item>
+        <item>800</item>
+        <item>640</item>
+        <item>480</item>
+    </string-array>
+    <string-array name="pref_camera_button_list">
+        <item>無し</item>
+        <item>カメラボタン</item>
+    </string-array>
+    <string-array name="pref_camera_button_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="pref_color_scheme_list">
+        <item>デフォルト</item>
+        <item>クラシック</item>
+        <item>ハイコントラスト</item>
+    </string-array>
+    <string-array name="pref_color_scheme_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="pref_enter_post_list">
+        <item>無し</item>
+        <item>Enter</item>
+        <item>Shift + Enter (QWERTY端末向け)</item>
+    </string-array>
+    <string-array name="pref_enter_post_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="pref_icon_size_list">
+        <item>高画質</item>
+        <item>標準</item>
+        <item>低画質</item>
+    </string-array>
+    <string-array name="pref_icon_size_values">
+        <item>2</item>
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="pref_off_timer_list">
+        <item>5分</item>
+        <item>10分</item>
+        <item>30分</item>
+        <item>1時間</item>
+        <item>2時間</item>
+        <item>5時間</item>
+        <item>常時オン</item>
+    </string-array>
+    <string-array name="pref_off_timer_values">
+        <item>5</item>
+        <item>10</item>
+        <item>30</item>
+        <item>60</item>
+        <item>120</item>
+        <item>300</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="pref_quote_format_list">
+        <item>QT @ScreenName {引用元}</item>
+        <item>RT @ScreenName {引用元}</item>
+    </string-array>
+    <string-array name="pref_quote_format_values">
+        <item>QT</item>
+        <item>RT</item>
+    </string-array>
+    <string-array name="pref_retweeted_by_style_list">
+        <item>RT by @ScreenName</item>
+        <item>RT by ユーザー名</item>
+    </string-array>
+    <string-array name="pref_retweeted_by_style_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="pref_theme_list">
+        <item>白</item>
+        <item>黒</item>
+    </string-array>
+    <string-array name="pref_theme_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="pref_thumbnail_list">
+        <item>無効</item>
+        <item>有効</item>
+    </string-array>
+    <string-array name="pref_thumbnail_values">
+        <item>0</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="pref_tweet_hint_list">
+        <item>いまどうしてる？</item>
+        <item>ツイート</item>
+    </string-array>
+    <string-array name="pref_tweet_hint_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    <string-array name="pref_upload_to_list">
+        <item>pic.twitter.com</item>
+        <item>img.ly</item>
+        <item>ついっぷるフォト</item>
+    </string-array>
+    <string-array name="pref_upload_to_values">
+        <item>TWITTER</item>
+        <item>IMG_LY</item>
+        <item>TWIPPLE</item>
+    </string-array>
+</resources>

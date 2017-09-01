@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/timeline_settings"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/timeline_settings">
+        <CheckBoxPreference android:title="@string/animation" android:key="pref_use_animation" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/touchable_scroll_bar" android:key="pref_fast_scroll" android:summary="@string/application_restart_is_required" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/store_timeline" android:key="pref_store_timeline" android:summary="@string/application_restart_is_required" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/keep_timeline_position" android:key="pref_keep_position" android:summary="@string/application_restart_is_required" android:dependency="pref_store_timeline" android:defaultValue="false" />
+        <EditTextPreference android:maxLength="2" android:title="@string/tweets_per_load_timeline" android:key="pref_items_per_page" android:defaultValue="20" android:inputType="number" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/dual_timeline">
+        <CheckBoxPreference android:title="@string/dual_timeline_mode" android:key="pref_sub_list" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/split_vertically" android:key="pref_split_vertically" android:dependency="pref_sub_list" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/single_line">
+        <CheckBoxPreference android:title="@string/single_line_mode" android:key="pref_single_line" android:summary="@string/application_restart_is_required" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/word_wrap" android:key="pref_word_wrap" android:summary="@string/application_restart_is_required" android:dependency="pref_single_line" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/show_screenname" android:key="pref_show_screen_name" android:summary="@string/application_restart_is_required" android:dependency="pref_single_line" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/item_appearance">
+        <EditTextPreference android:maxLength="2" android:title="@string/font_size" android:key="pref_font_size" android:summary="@string/application_restart_is_required" android:defaultValue="14" android:dialogTitle="@string/font_size" android:inputType="number" />
+        <ListPreference android:entries="@array/pref_icon_size_list" android:title="@string/icon_quality" android:key="pref_icon_size" android:defaultValue="1" android:dialogTitle="@string/icon_quality" android:entryValues="@array/pref_icon_size_values" />
+        <ListPreference android:entries="@array/pref_thumbnail_list" android:title="@string/thumbnail" android:key="pref_thumbnail" android:defaultValue="2" android:dialogTitle="@string/thumbnail" android:entryValues="@array/pref_thumbnail_values" />
+        <ListPreference android:entries="@array/pref_retweeted_by_style_list" android:title="@string/format_of_rt_by" android:key="pref_retweeted_by_style" android:defaultValue="0" android:dialogTitle="@string/format_of_rt_by" android:entryValues="@array/pref_retweeted_by_style_values" />
+        <CheckBoxPreference android:title="@string/absolute_time" android:key="pref_absolute_time" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/clickable_links" android:key="pref_clickable_link" android:summary="@string/application_restart_is_required" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/show_clients" android:key="pref_show_via" android:defaultValue="true" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/appearance_settings" android:key="pref_screen_appearance"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/appearance_settings">
+        <ListPreference android:entries="@array/pref_theme_list" android:title="@string/theme" android:key="pref_theme" android:summary="@string/application_restart_is_required" android:defaultValue="0" android:entryValues="@array/pref_theme_values" />
+        <ListPreference android:entries="@array/pref_color_scheme_list" android:title="@string/color_scheme" android:key="pref_color_scheme" android:summary="@string/application_restart_is_required" android:defaultValue="0" android:entryValues="@array/pref_color_scheme_values" />
+        <ListPreference android:entries="@array/pref_tweet_hint_list" android:title="@string/hint_text" android:key="pref_tweet_hint" android:summary="@string/application_restart_is_required" android:defaultValue="0" android:entryValues="@array/pref_tweet_hint_values" />
+        <CheckBoxPreference android:title="@string/heart" android:key="pref_use_like" android:summary="@string/application_restart_is_required" android:defaultValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/fullscreen">
+        <CheckBoxPreference android:title="@string/fullscreen" android:key="pref_full_screen" android:summary="@string/application_restart_is_required" android:defaultValue="false" />
+        <CheckBoxPreference android:title="@string/hide_action_bar" android:key="pref_hide_action_bar" android:summary="@string/application_restart_is_required" android:dependency="pref_full_screen" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/hide_navigation_bar" android:key="pref_hide_navigation_bar" android:summary="@string/android_4_4_or_later" android:dependency="pref_full_screen" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/splash_screen" android:key="pref_category_splash">
+        <CheckBoxPreference android:title="@string/splash_screen" android:key="pref_splash_screen" android:summary="@string/application_restart_is_required" android:defaultValue="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

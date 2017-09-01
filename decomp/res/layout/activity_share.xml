@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_gravity="right" android:id="@id/cardUpload" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="48.0dip">
+            <include android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/card_upload_array" />
+        </FrameLayout>
+    </ScrollView>
+    <FrameLayout android:id="@id/cardPost" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="8.0dip" android:layout_alignParentBottom="true">
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/card_post" />
+    </FrameLayout>
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/overlay_progress_circle" />
+</RelativeLayout>

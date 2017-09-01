@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/cardPlayer">
+        <VideoView android:id="@id/videoView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+        <ProgressBar android:id="@id/progressBarVideo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:layout_alignParentStart="true" style="?android:attr/progressBarStyleHorizontal" />
+        <TextView android:textColor="@color/holo_light" android:id="@id/textViewVideoProgress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/progressBarVideo" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <include android:id="@id/cardPlayer" android:layout_width="48.0dip" android:layout_height="fill_parent" android:layout_margin="8.0dip" android:layout_alignParentRight="true" layout="@layout/card_player" />
+</RelativeLayout>

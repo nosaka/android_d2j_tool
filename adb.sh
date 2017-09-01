@@ -1,24 +1,29 @@
 #!/bin/sh
 
-MY_DIR=$(cd $(dirname $0) && pwd)
+# constant
+DIR_TOOL="./tools/"
+DIR_WORK="./work/"
+DIR_DECOMP="./decomp/"
 
-APK_DIR="./apk/"
-APK_FILE="target.apk"
+APK_FILE=$DIR_WORK"target.apk"
+APK_JAR=$DIR_WORK"classes-dex2jar.jar"
 
-DECOMP_DIR="./decomp"
+CMD_D2J=$DIR_TOOL"dex2jar-2.0/d2j-dex2jar.sh"
+CMD_APKTOOL=$DIR_TOOL"apktool.sh" 
 
-D2J_SH="./dex2jar-2.0/d2j-dex2jar.sh"
-D2J_JAR="classes-dex2jar.jar"
+# apk格納ディレクトリの作成、及びディレクトリ内ファイル削除
+mkdir -p $DIR_WORK
+rm -rf $DIR_WORK*
 
-mkdir -p $APK_DIR
-rm -rf $APK_DIR*
+# decomp格納ディレクトリの作成、及びディレクトリ内ファイル削除
+mkdir -p $DIR_DECOMP
+rm -rf $DIR_DECOMP*
 
-mkdir -p $DECOMP_DIR
-rm -rf $DECOMP_DIR
-
+# パッケージ名の入力
 echo -n "Please input package name."
 read in_package
 
+# 端末内パッケージの検索
 echo "Search [$in_package]"
 pm_result=`adb shell pm list packages -f | grep $in_package | head -1`
 
@@ -26,6 +31,12 @@ echo "================"
 echo "$pm_result"
 echo "================"
 
+if [ ! -n "$pm_result" ]; then
+	echo "[$in_package] was not found."
+	exit
+fi
+
+# 対象パッケージの確認
 target_pkg=`echo $pm_result | sed -e "s/^.*=\(.*\).*$/\1/"`
 target_apk=`echo $pm_result | sed -e "s/^.*package:\(.*\)=.*.*$/\1/"`
 echo $target_apk
@@ -35,7 +46,7 @@ read is_analyze
 
 case $is_analyze in 
 	y)
-		echo 'last name of Mami is Tomoe.'
+		echo 'continue...'
 		;;
 	*)
 		echo 'Exit.'
@@ -43,23 +54,27 @@ case $is_analyze in
 		;;
 	esac
 
-rm -rf $APK_DIR*
-adb pull $target_apk $APK_DIR$APK_FILE
+# 端末からapkの抜き出し
+adb pull $target_apk $APK_FILE
 
-cd  $APK_DIR
-unzip $APK_FILE
-rm -rf $APK_FILE
+# apktoolの実行
+$CMD_APKTOOL decode --no-src $APK_FILE -o  $DIR_DECOMP -f 
 
-cd $MY_DIR
+# # apkの解凍
+# unzip $APK_FILE  -d $DIR_WORK > /dev/null
+# 
 
-$D2J_SH $APK_DIR"classes.dex" -o $APK_DIR$D2J_JAR  --force 
+# dex2jarの実行
+$CMD_D2J $DIR_DECOMP"classes.dex" -o $APK_JAR --force  > /dev/null
 
-cd  $APK_DIR
-unzip $D2J_JAR
+# jarの解凍
+unzip $APK_JAR  -d $DIR_WORK > /dev/null
 
-cd $MY_DIR
+# jadの実行
+jad -o -r -sjava -d$DIR_DECOMP $DIR_WORK"**/*.class" > /dev/null
 
-jad -o -r -sjava -d$DECOMP_DIR $APK_DIR"**/*.class"
+# 後処理
+rm -rf $DIR_WORK
 
 
 

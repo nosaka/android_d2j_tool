@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen android:title="@string/general_settings"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/confirm_dialog">
+        <CheckBoxPreference android:title="@string/post" android:key="pref_confirm_post" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/retweet" android:key="pref_confirm_retweet" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/like" android:key="pref_confirm_favorite" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/quit" android:key="pref_confirm_quit" android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/system_settings">
+        <CheckBoxPreference android:title="@string/keep_screen_on_while_streaming" android:key="pref_screen" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/low_bandwidth_mode" android:key="pref_low_bandwidth_mode" android:defaultValue="false" />
+        <ListPreference android:entries="@array/pref_off_timer_list" android:title="@string/off_timer" android:key="pref_off_timer" android:defaultValue="60" android:entryValues="@array/pref_off_timer_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/key_settings">
+        <ListPreference android:entries="@array/pref_enter_post_list" android:title="@string/tweet" android:key="pref_enter_post" android:defaultValue="2" android:dialogTitle="@string/shortcut_to_tweet" android:entryValues="@array/pref_enter_post_values" />
+        <ListPreference android:entries="@array/pref_camera_button_list" android:title="@string/launch_camera" android:key="pref_camera_button" android:defaultValue="1" android:dialogTitle="@string/shortcut_to_launch_camera" android:entryValues="@array/pref_camera_button_values" />
+    </PreferenceCategory>
+</PreferenceScreen>
